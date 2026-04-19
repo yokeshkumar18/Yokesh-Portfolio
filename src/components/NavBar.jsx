@@ -188,10 +188,10 @@ const NavBar = () => {
               }`}
             >
               <h3 className="text-paragraph z-30 capitalize text-sm flex items-center gap-2">
-                <MdCopyright /> 2024, all rights reserved
+                <MdCopyright /> 2026, all rights reserved
               </h3>
               <h3 className="text-paragraph z-30 capitalize text-sm">
-                Developed by: <span className="text-primary">nowfal</span>
+                Developed by: <span className="text-primary">YOKESH</span>
               </h3>
             </div>
           </div>

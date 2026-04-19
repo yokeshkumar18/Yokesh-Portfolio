@@ -75,7 +75,7 @@ const Footer = () => {
         <div className=" flex flex-col gap-3 lg:flex-row justify-between lg:items-center py-20">
           <h3 className=" text-paragraph !z-30  capitalize text-sm flex items-center gap-2">
             {" "}
-            <MdCopyright /> 2024, all rights reserved
+            <MdCopyright /> 2026, all rights reserved
           </h3>
           <h3 className=" text-paragraph !z-30  capitalize text-sm">
             Developed by: <span className=" text-primary">YOKESH</span>

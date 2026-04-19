@@ -7,6 +7,7 @@ import HeroSection from "../sections/HeroSection";
 import ProjectSection from "../sections/ProjectSection";
 import RecordSection from "../sections/RecordSection";
 import ServiceSection from "../sections/ServiceSection";
+import ExperienceSection from "../sections/ExperienceSection";
 
 const Home = () => {
   return (
@@ -14,56 +15,34 @@ const Home = () => {
       {/* SEO Optimization */}
       <Helmet>
         {/* Basic SEO */}
-        <title>Yokeshkumar | Full Stack Developer & AI Expert</title>
+        <title>Yokesh Kumar T R | Full Stack Developer</title>
         <meta
           name="description"
-          content="Explore the portfolio of Mohammed Nowfal, a skilled full-stack developer specializing in web, mobile, desktop, and AI solutions."
+          content="Portfolio of Yokesh Kumar T R, a Full Stack Developer specializing in React, Next.js 15, TypeScript, and Node.js with production experience."
         />
         <meta
           name="keywords"
-          content="Mohammed Nowfal, Full Stack Developer, AI Developer, Web Development, Mobile Apps, React, Django, AI Solutions"
+          content="Yokesh Kumar T R, Yokesh, Full Stack Developer, React Developer, Next.js Developer, TypeScript, Softnix Solutions, Unityr Techlabs"
         />
-        <meta name="author" content="Mohammed Nowfal" />
+        <meta name="author" content="Yokesh Kumar T R" />
         <meta name="robots" content="index, follow" />
 
-        {/* Canonical URL (Prevents Duplicate Content Issues) */}
-        <link rel="canonical" href="https://nowfal.dev/" />
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://yokeshkumar.dev/" />
 
-        {/* Open Graph Meta Tags (Facebook, LinkedIn) */}
+        {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mohammed Nowfal | Full Stack Developer & AI Expert"
+          content="Yokesh Kumar T R | Full Stack Developer"
         />
         <meta
           property="og:description"
-          content="Explore the portfolio of Mohammed Nowfal, a skilled full-stack developer specializing in web, mobile, desktop, and AI solutions."
+          content="Production-experienced Full Stack Developer specializing in high-performance web applications using Next.js 15."
         />
-        <meta property="og:image" content="https://nowfal.dev/logo.png" />
-        <meta property="og:url" content="https://nowfal.dev/" />
-        <meta property="og:site_name" content="Nowfal Dev Portfolio" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Mohammed Nowfal | Full Stack Developer & AI Expert"
-        />
-        <meta
-          name="twitter:description"
-          content="Explore the portfolio of Mohammed Nowfal, a skilled full-stack developer specializing in web, mobile, desktop, and AI solutions."
-        />
-        <meta name="twitter:image" content="https://nowfal.dev/logo.png" />
-        <meta name="twitter:site" content="@yourtwitterhandle" />
-
-        {/* GitHub, Instagram & Other Social Media Meta Tags */}
-        <meta name="github:card" content="summary" />
-        <meta name="instagram:card" content="summary" />
-
-        {/* Favicon & Apple Touch Icons */}
-        <link rel="icon" href="/logo.png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <link rel="icon" type="image/png" href="/favicon.ico" />
+        <meta property="og:image" content="/logo.png" />
+        <meta property="og:url" content="https://yokeshkumar.dev/" />
+        <meta property="og:site_name" content="Yokesh Kumar Portfolio" />
 
         {/* Mobile Optimization */}
         <meta
@@ -71,33 +50,21 @@ const Home = () => {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
 
-        {/* Preconnect & DNS Prefetching (Performance Optimization) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-
-        {/* JSON-LD Structured Data for SEO */}
+        {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            name: "Mohammed Nowfal",
-            url: "https://nowfal.dev/",
-            image: "https://nowfal.dev/logo.png",
-            jobTitle: "Full Stack Developer & AI Expert",
+            name: "Yokesh Kumar T R",
+            url: "https://yokeshkumar.dev/",
+            jobTitle: "Full Stack Developer",
             worksFor: {
               "@type": "Organization",
-              name: "Nowfal Dev",
+              name: "Softnix Solutions",
             },
             sameAs: [
-              "https://github.com/nowfaldev",
-              "https://linkedin.com/in/mohammed-nowfal",
-              "https://twitter.com/nowfaldev",
-              "https://instagram.com/nowfaldev",
+              "https://github.com/yokeshk868",
+              "https://linkedin.com/in/yokesh-kumar-t-r",
             ],
           })}
         </script>
@@ -108,6 +75,7 @@ const Home = () => {
         <HeroSection />
         <AboutSection />
         <RecordSection />
+        <ExperienceSection />
         <ServiceSection />
         <ProjectSection />
         <BlogSection />

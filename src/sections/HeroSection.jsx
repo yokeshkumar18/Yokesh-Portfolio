@@ -2,6 +2,8 @@ import { FaRegHandPeace } from "react-icons/fa6";
 import Button from "../components/Button";
 import { useParallax } from "react-scroll-parallax";
 import { useEffect, useMemo, useState } from "react";
+import { heroData, aboutData } from "../utils/staticData";
+
 const HeroSection = () => {
   const getTranslateX = () => {
     if (window.matchMedia("(max-width: 640px)").matches) {
@@ -45,7 +47,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="overflow-hidden snap-start relative pt-36  pb-10 md:pt-44 md:pb-24 flex-col flex justify-center items-center"
+      className="overflow-hidden snap-start relative pt-36 pb-10 md:pt-44 md:pb-24 flex-col flex justify-center items-center"
     >
       <div
         className={`h-64 design absolute top-0 left-0 w-full ease-in-out transition-opacity duration-100`}
@@ -57,62 +59,44 @@ const HeroSection = () => {
       <div className="main !z-20">
         <div className="flex flex-col lg:flex-row gap-14">
           <div className="lg:w-1/2 space-y-10">
-            <div className="content space-y-10">
-              <h5 className=" flex items-center text-xs font-semibold gap-2 text-paragraph uppercase tracking-widest">
-                <FaRegHandPeace className={"!text-primary text-2xl"} /> welcome
-                my friend
+            <div className="content space-y-10 text-center lg:text-left">
+              <h5 className=" flex items-center justify-center lg:justify-start text-xs font-semibold gap-2 text-paragraph uppercase tracking-widest">
+                <FaRegHandPeace className={"!text-primary text-2xl"} /> {heroData.subHeading}
               </h5>
-              <h1 className=" text-[56px] uppercase !font-heading  leading-sm">
-                hello i&apos;m <br /> Yokesh{" "}
-                <span className=" !font-heading  text-primary">kumar,</span>{" "}
-                fullstack developer
+              <h1 className=" text-[48px] md:text-[56px] uppercase !font-heading leading-tight md:leading-sm">
+                hello i&apos;m <br /> 
+                <span className="text-primary !font-heading">{heroData.heading}</span>
               </h1>
-              {/* <p className=' !mb-7 text-paragraph capitalize leading-relaxed'>I develop web, mobile, and desktop applications, integrating AI for enhanced functionality. Committed to creating user-centric solutions with the latest technologies.</p> */}
+              <p className="text-paragraph text-lg md:text-xl font-medium tracking-wide">
+                {heroData.role} <br className="hidden md:block"/> {heroData.description}
+              </p>
             </div>
-            <div className=" flex items-center gap-6">
+            <div className=" flex items-center justify-center lg:justify-start gap-6">
               <Button item="download cv" />
             </div>
           </div>
-          <div className="hero-image  lg:w-1/2  relative flex justify-end items-center ml-auto">
-            <div className=" rounded-full h-[190%]  flex justify-center items-center relative overflow-hidden w-[95%]">
+          <div className="hero-image lg:w-1/2 relative flex justify-end items-center ml-auto">
+            <div className="rounded-full h-[190%] flex justify-center items-center relative overflow-hidden w-[95%]">
               <img
-                src="hero7.png"
-                className=" grayscale-75 opacity-75 rotate-[3deg] absolute w-[100%] -top-16  h-fit"
-                alt=""
+                src="hero7.png" // User should provide their image here
+                className="grayscale-75 opacity-75 rotate-[3deg] absolute w-[100%] -top-16 h-fit"
+                alt={heroData.heading}
               />
             </div>
-            {/* <Photo/> */}
           </div>
         </div>
       </div>
-      <div className="w-[102%] z-30 overflow-visible relative bg-primary rotate-[-5deg] p-4">
+      <div className="w-[102%] z-30 overflow-visible relative bg-primary rotate-[-5deg] p-4 shadow-xl">
         <div ref={ref} className=" flex whitespace-nowrap">
           {[
-            "web development",
-            "mobile app development",
-            "desktop app development",
-            "artificial intelligence",
-            "search engine optimization",
+            ...Object.values(aboutData.skillData.technologies).join(", ").split(", ").slice(0, 10),
+            ...Object.values(aboutData.skillData.technologies).join(", ").split(", ").slice(0, 10)
           ].map((item, index) => (
             <h1
-              key={`original-${index}`}
-              className="text-heading !font-heading uppercase text-2xl inline-block mx-6"
+              key={index}
+              className="text-heading !font-heading uppercase text-xl md:text-2xl inline-block mx-6 tracking-wider"
             >
-              {item}
-            </h1>
-          ))}
-          {[
-            "web development",
-            "mobile app development",
-            "desktop app development",
-            "artificial intelligence",
-            "search engine optimization",
-          ].map((item, index) => (
-            <h1
-              key={`duplicate-${index}`}
-              className="text-heading !font-heading uppercase text-2xl inline-block mx-6"
-            >
-              {item}
+              • {item}
             </h1>
           ))}
         </div>
@@ -122,3 +106,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

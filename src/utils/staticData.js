@@ -1,246 +1,292 @@
-import { FaMobileAlt, FaSearch, FaShieldAlt, FaShoppingCart, FaBell, FaBolt, FaLaptopCode, FaServer, FaUsers, FaBrain, FaEye, FaLanguage, FaChartLine, FaLock, FaLayerGroup, FaCog, FaDatabase } from "react-icons/fa";
-import { MdDevices } from "react-icons/md";
-import { FiMonitor } from "react-icons/fi";
-import { AiOutlineCloud } from "react-icons/ai";
+import { FaMobileAlt, FaSearch, FaShieldAlt, FaShoppingCart, FaBell, FaBolt, FaLaptopCode, FaServer, FaUsers, FaBrain, FaEye, FaLanguage, FaChartLine, FaLock, FaLayerGroup, FaCog, FaDatabase, FaReact, FaNodeJs, FaCode, FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdDevices, MdOutlineDashboard, MdQrCodeScanner } from "react-icons/md";
+import { FiMonitor, FiArrowRight } from "react-icons/fi";
+import { AiOutlineCloud, AiOutlineDeploymentUnit } from "react-icons/ai";
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiElectron, SiMysql, SiPostman, SiFigma } from "react-icons/si";
 
-const serviceData = [{
-        name: 'web-development',
-        title: 'Web Development',
-        image: '/blog.png',
-        description: 'We provide top-notch web development services using the latest technologies and frameworks to build secure, scalable, and high-performance websites.',
+const serviceData = [
+    {
+        name: 'frontend-development',
+        title: 'Frontend Development',
+        image: '/frontend.png',
+        description: 'Specializing in Next.js 15 and React.js to build high-performance, responsive, and intuitive user interfaces.',
         details: [
-            "Our web development services focus on creating fully responsive and interactive websites tailored to meet the unique needs of your business. We use cutting-edge technologies such as React, Angular, and Vue.js for the frontend and Node.js, Django, or Laravel for the backend, ensuring that your website is robust, scalable, and easy to maintain.",
+            "I architect and deliver production-ready frontends using the latest React ecosystem. My focus is on component standardization, state management with Context API/Redux, and ensuring pixel-perfect designs with Tailwind CSS.",
         ],
-        features: [{
+        features: [
+            {
+                heading: 'Next.js 15 & SSR',
+                icon: SiNextdotjs,
+                description: 'Leveraging Server-Side Rendering and App Router for SEO-friendly, fast-loading applications.',
+            },
+            {
+                heading: 'TypeScript Integration',
+                icon: SiTypescript,
+                description: 'Ensuring type safety and maintainable codebases across large-scale applications.',
+            },
+            {
                 heading: 'Responsive Design',
                 icon: MdDevices,
-                description: 'Ensuring your website adapts seamlessly across all devices, providing a consistent and user-friendly experience for all users.',
+                description: 'Crafting fluid layouts that provide a seamless experience across all screen sizes.',
             },
             {
-                heading: 'SEO Optimization',
-                icon: FaSearch,
-                description: 'Improving your website’s visibility and ranking on search engines to drive organic traffic and increase online presence.',
-            },
-            {
-                heading: 'Fast Load Times',
-                icon: FaBolt,
-                description: 'Optimizing website performance for fast page load times, enhancing user experience and improving search rankings.',
-            },
-            {
-                heading: 'Custom Web Applications',
-                icon: FaLaptopCode,
-                description: 'Developing custom web applications tailored to your business needs, ensuring high performance and seamless functionality.',
-            },
-            {
-                heading: 'E-commerce Solutions',
-                icon: FaShoppingCart,
-                description: 'Creating secure and efficient e-commerce platforms with integrated payment gateways for online selling.',
-            },
-            {
-                heading: 'Content Management Systems (CMS)',
-                icon: FaServer,
-                description: 'Building and integrating user-friendly CMS solutions for efficient and effortless website content management.',
-            },
-        ],
-    },
-    {
-        name: 'mobile-app-development',
-        title: 'Mobile App Development',
-        image: '/blog.png',
-        description: 'Our mobile app development services offer custom solutions for Android and iOS platforms, ensuring a seamless user experience and robust functionality.',
-        details: [
-            "We specialize in developing high-quality mobile applications for both Android and iOS platforms. Our team uses the latest development frameworks such as React Native, Flutter, and Swift to build apps that are fast, reliable, and user-friendly. We work closely with you to understand your business requirements and ensure that your app delivers a smooth and engaging user experience.",
-            "Our mobile apps are designed to meet the highest standards of performance and security. Whether you're launching a new app or enhancing an existing one, we provide end-to-end services, from app design and development to testing, deployment, and ongoing maintenance. We ensure that your app is fully optimized for performance and security, delivering seamless functionality to your users."
-        ],
-        features: [{
-                heading: 'Cross-Platform Development',
-                icon: FaMobileAlt,
-                description: 'Developing apps for both iOS and Android, ensuring wide accessibility and consistent user experience across devices.',
-            },
-            {
-                heading: 'User-Centric UI/UX Design',
-                icon: FaUsers,
-                description: 'Creating intuitive and user-friendly interfaces that enhance engagement and ensure a smooth experience for users.',
-            },
-            {
-                heading: 'Performance Optimization',
-                icon: FaBolt,
-                description: 'Focusing on performance optimization for smooth app functionality, minimal load times, and high responsiveness.',
-            },
-            {
-                heading: 'Secure Apps',
-                icon: FaShieldAlt,
-                description: 'Prioritizing security with advanced encryption and security features to protect user data and ensure app safety.',
-            },
-            {
-                heading: 'Push Notifications',
-                icon: FaBell,
-                description: 'Implementing push notifications to keep users engaged and informed, promoting retention and interaction.',
-            },
-            {
-                heading: 'In-App Purchases',
-                icon: FaShoppingCart,
-                description: 'Integrating in-app purchase capabilities for effective app monetization and additional user features.',
-            },
-        ],
-    },
-    {
-        name: 'desktop-software-development',
-        title: 'Desktop Software Development',
-        image: '/blog.png',
-        description: 'We specialize in creating powerful and efficient desktop software applications tailored to meet your business needs, with cross-platform compatibility.',
-        details: [
-            "Our desktop software development services help businesses automate processes and improve efficiency with custom software solutions. Whether you're looking for a tool to manage internal workflows, enhance customer interaction, or manage data, we design and develop desktop applications that work seamlessly across Windows, macOS, and Linux platforms.",
-            "We ensure that the software is optimized for speed, security, and scalability, making sure it meets the unique needs of your business. Our applications are built with intuitive interfaces, powerful functionality, and are fully scalable to accommodate future growth. We use technologies like Electron, C++, and .NET to create robust applications that deliver high performance across different platforms."
-        ],
-        features: [{
-                heading: 'Cross-Platform Compatibility',
-                icon: FiMonitor,
-                description: 'Building desktop applications that work seamlessly across Windows, macOS, and Linux operating systems.',
-            },
-            {
-                heading: 'Custom Software Solutions',
-                icon: FaCog,
-                description: 'Developing software tailored to your specific business needs, streamlining operations and improving efficiency.',
-            },
-            {
-                heading: 'Advanced Data Processing',
-                icon: FaDatabase,
-                description: 'Including powerful data processing capabilities for efficient data analysis and management.',
-            },
-            {
-                heading: 'Intuitive Interfaces',
-                icon: MdDevices,
-                description: 'Designing user-friendly interfaces that are easy to navigate, ensuring a positive user experience.',
-            },
-            {
-                heading: 'Secure Solutions',
-                icon: FaLock,
-                description: 'Implementing robust encryption and user authentication to protect sensitive business data.',
-            },
-            {
-                heading: 'Integration Services',
+                heading: 'State Management',
                 icon: FaLayerGroup,
-                description: 'Offering seamless connectivity between your desktop software and other systems or applications.',
+                description: 'Efficient global state handling using Context API and modern patterns to reduce overhead.',
             },
         ],
     },
     {
-        name: 'ai-solutions',
-        title: 'AI Solutions',
-        image: '/blog.png',
-        description: 'Our AI solutions leverage cutting-edge technologies in computer vision, NLP, and predictive modeling to drive innovation and solve complex challenges.',
+        name: 'full-stack-integration',
+        title: 'Full Stack Integration',
+        image: '/fullstack.png',
+        description: 'Bridging the gap between frontend and backend with robust API integrations and Node.js services.',
         details: [
-            "We provide advanced AI solutions that help businesses automate processes, enhance decision-making, and unlock new growth opportunities. Using state-of-the-art machine learning algorithms and neural networks, we develop custom solutions tailored to your business needs. Whether it's image recognition, natural language processing, or predictive analytics, we have the expertise to build AI models that deliver real-world results.",
-            "Our AI solutions are designed to be scalable, adaptable, and capable of processing large amounts of data in real-time. We use platforms like TensorFlow, Keras, and PyTorch to build intelligent systems that can learn, adapt, and make decisions. By integrating AI into your business operations, we can help you increase efficiency, reduce costs, and gain a competitive advantage in your industry."
+            "I integrate complex REST APIs and develop backend services with Node.js and Express. My experience includes real-time data rendering and database management with MySQL, ensuring data accuracy across enterprise systems.",
         ],
-        features: [{
-                heading: 'Custom AI Models',
-                icon: FaBrain,
-                description: 'Developing custom AI models tailored to your needs, ensuring optimal performance and precision.',
+        features: [
+            {
+                heading: 'REST API Integration',
+                icon: AiOutlineDeploymentUnit,
+                description: 'Integrating multiple endpoints with real-time data synchronization and error handling.',
             },
             {
-                heading: 'Computer Vision',
-                icon: FaEye,
-                description: 'Advanced algorithms to analyze and interpret visual data, automating tasks like object detection and image recognition.',
+                heading: 'Node.js Backend',
+                icon: FaNodeJs,
+                description: 'Building scalable server-side logic and managing database interactions efficiently.',
             },
             {
-                heading: 'Natural Language Processing (NLP)',
-                icon: FaLanguage,
-                description: 'Building systems that understand, interpret, and respond to human language, enhancing interaction and automation.',
+                heading: 'Real-Time Data',
+                icon: FaBolt,
+                description: 'Implementing features that require instant updates and live data accuracy.',
             },
             {
-                heading: 'Predictive Analytics',
-                icon: FaChartLine,
-                description: 'Utilizing analytics to forecast trends, detect anomalies, and optimize business processes.',
+                heading: 'Role-Based Access (RBAC)',
+                icon: FaLock,
+                description: 'Securing applications with scoped permissions and data-controlled views.',
+            },
+        ],
+    },
+    {
+        name: 'desktop-app-development',
+        title: 'Desktop App Development',
+        image: '/desktop.png',
+        description: 'Developing cross-platform desktop applications using Electron.js with offline-first capabilities.',
+        details: [
+            "I built and shipped a restaurant POS desktop app using React.js and Electron.js. This project emphasized offline-first architecture, ensuring business continuity without internet connectivity.",
+        ],
+        features: [
+            {
+                heading: 'Electron.js Framework',
+                icon: SiElectron,
+                description: 'Creating native-feeling desktop experiences for Windows and macOS.',
             },
             {
-                heading: 'Real-Time Data Processing',
-                icon: AiOutlineCloud,
-                description: 'Processing and analyzing data in real-time, delivering insights and actions quickly and efficiently.',
+                heading: 'Offline-First Architecture',
+                icon: FaShieldAlt,
+                description: 'Implementing local synchronization to ensure zero data loss during network outages.',
             },
             {
-                heading: 'AI-Powered Chatbots',
-                icon: FaUsers,
-                description: 'Enhancing customer service with AI chatbots, providing instant responses and support.',
+                heading: 'Inventory Management',
+                icon: FaDatabase,
+                description: 'Building complex systems to track sales, stock, and analytics in a desktop environment.',
             },
         ],
     }
 ];
 
 const aboutData = {
-    pageHeader: "About Me",
-    heading: 'My vision is to create happy my clients',
+    pageHeader: "Experience & Story",
+    heading: 'Driven by Code, Focused on User Experience',
     abstract: [
-        "I am Yokesh kumar, a passionate and skilled software developer specializing in full-stack development, AI solutions, and innovative problem-solving.",
-        "With expertise in web, mobile, and desktop applications, I strive to create efficient, scalable, and user-friendly solutions for businesses and individuals alike. My development process involves a combination of cutting-edge technologies, best coding practices, and a problem-solving mindset to ensure high performance and reliability.",
-        "My mission is to leverage technology to solve real-world problems and drive digital transformation, making an impact in the evolving digital landscape. Whether it's automating workflows, enhancing user experiences, or deploying AI-powered solutions, I am committed to delivering excellence and innovation."
+        "I am Yokesh Kumar T R, a Full Stack Developer (Frontend-Focused) with 9+ months of production internship experience. I specialize in building scalable web and desktop applications using React, Next.js 15, and Node.js.",
+        "Currently at Softnix Solutions, I architect complex ERP systems and property management tools. I'm passionate about clean code, component standardization, and delivering high-impact solutions that solve real-world business challenges.",
+        "My journey started with a focus on problem-solving, leading to the development of several live projects, from QR-based check-in systems to multi-tenant booking platforms. I am committed to continuous learning and staying ahead of the curve in the React ecosystem."
     ],
     detail: [
-        "I specialize in full-stack development, AI, and software engineering, building scalable, high-performance applications. My expertise spans JavaScript, Python, and java, enabling me to create web, mobile, and AI-powered solutions that enhance productivity and efficiency. I constantly stay updated with emerging technologies to ensure my solutions are cutting-edge and adaptable to future trends.",
-        "I focus on machine learning, computer vision, and automation, using TensorFlow, PyTorch, and OpenCV. From facial recognition to object detection, I develop intelligent solutions that improve security, business operations, and user experiences. My approach involves continuous learning and refining AI models to achieve higher accuracy and efficiency in real-world applications.",
-        "I continuously explore new technologies, optimize architectures, and refine my skills in AI and cloud computing. My goal is to create cutting-edge solutions that drive digital transformation and make a lasting impact. By integrating automation and advanced analytics, I help businesses scale efficiently and stay ahead in a competitive digital landscape."
+        "Specialized in Next.js 15, React, and TypeScript for enterprise-grade frontend development.",
+        "Experienced in integrating 15+ REST API endpoints and managing real-time data accuracy.",
+        "Proficient in building offline-first desktop applications with Electron.js.",
+        "B.Tech in Computer Science and Business Systems (Expected 2026)."
     ],
-    image: "/nowfal.jpg",
+    image: "/yokesh-profile.jpg", // Placeholder for actual image
     recordDummy: [1, 2, 3, 4],
     skillData: {
-        heading: "My Tech Stack",
-        paragraph: "I specialize in full-stack development, AI, and cloud computing. My experience spans frontend and backend frameworks, DevOps tools, and database management. I focus on integrating the latest technologies to create scalable, efficient, and innovative applications. With a deep understanding of cloud infrastructure, I ensure seamless integration of applications with robust, scalable cloud services.",
+        heading: "Technical Arsenal",
+        paragraph: "My tech stack is built around the modern JavaScript ecosystem, focusing on performance, type safety, and developer experience.",
         technologies: {
-            language: "JavaScript, Python, C++, Java, TypeScript",
-            frontend: "React, Vue.js, Angular, Bootstrap, Tailwind CSS, Svelte, Next.js",
-            backend: "Node.js, Django, Laravel, Flask, Express.js",
-            aiml: "TensorFlow, PyTorch, OpenCV, Scikit-Learn, Keras",
-            others: "Git, Docker, Firebase, MongoDB, PostgreSQL, MySQL, Redis, AWS, Azure, Google Cloud, Kubernetes"
+            language: "JavaScript (ES6+), TypeScript, HTML5, CSS3",
+            frontend: "React.js, Next.js 15, Tailwind CSS, Context API, React Hook Form",
+            backend: "Node.js, Express.js, MySQL (CRUD, Joins)",
+            tools: "Git, GitHub, Postman, Figma, VS Code, Electron.js"
         }
     },
     profileData: {
-        heading: "Who Am I?",
-        paragraph: "A software engineer passionate about innovation, problem-solving, and building intelligent solutions."
+        heading: "Professional Identity",
+        paragraph: "A proactive developer who has moved from learning to shipping production code for organizations and international clients."
     }
+};
 
-}
+const experienceData = [
+    {
+        company: "Softnix Solutions",
+        role: "Frontend Developer Intern",
+        period: "Nov 2024 – Present",
+        highlights: [
+            "Architected QR-based visitor check-in, cutting manual time by ~40%.",
+            "Delivered full ERP frontend (10+ modules) reducing UI bugs by 30%.",
+            "Built Dubai-based Real Estate PMS for property listing and lease tracking.",
+            "Led code reviews and enforced frontend quality standards."
+        ]
+    },
+    {
+        company: "Unityr Techlabs",
+        role: "Frontend Developer Intern",
+        period: "Feb 2024 – Oct 2024",
+        highlights: [
+            "Shipped a restaurant POS desktop app using React + Electron with offline-first architecture.",
+            "Developed real-time API integrations for a conference management web app.",
+            "Consistently delivered sprint tasks across 8+ Agile cycles."
+        ]
+    }
+];
+
+const projects = [
+    {
+        title: "Real Estate Property Management System",
+        tech: "Next.js · TypeScript · Tailwind CSS",
+        description: "A comprehensive ERP frontend for a Dubai-based client covering property listings, tenant onboarding, and financial dashboards.",
+        image: "/pms.png",
+        client: "Dubai Real Estate Client",
+        link: "Confidential",
+        dateFrom: "Nov 2024",
+        dateTo: "Present",
+        statement: "The client needed a robust, scalable system to manage a large portfolio of properties, tenants, and lease agreements in the Dubai market, requiring role-based access and real-time financial tracking.",
+        details: [
+            "Built with Next.js 15 for optimal performance and SEO.",
+            "Implemented Role-Based Access Control (RBAC) for Managers, Agents, and Tenants.",
+            "Developed responsive dashboards for financial tracking and property analytics.",
+            "Integrated complex REST APIs for real-time lease management and renewals."
+        ],
+        technologyStack: {
+            paragraph: "The project utilizes a modern frontend stack to ensure performance, type safety, and a premium user experience.",
+            stack: {
+                frontend: ["Next.js 15", "TypeScript", "Tailwind CSS", "React Hook Form"],
+                state: ["Context API"],
+                icons: ["React Icons", "Lucide React"]
+            }
+        },
+        conclusion: "The system successfully streamlined the takeover process and improved property management efficiency for the client.",
+        tags: ["ERP", "Real Estate", "Next.js", "PropTech"]
+    },
+    {
+        title: "Appointment Booking System",
+        tech: "Next.js 15 · TypeScript · Tailwind CSS",
+        description: "Multi-tenant platform with dynamic subdomain routing and RBAC dashboards for 4 roles.",
+        image: "/booking.png",
+        client: "Softnix Solutions",
+        link: "Live in Production",
+        dateFrom: "Oct 2024",
+        dateTo: "Present",
+        statement: "The goal was to create a multi-tenant booking platform where each organization has its own branded subdomain and specialized dashboards for different staff roles.",
+        details: [
+            "Architected QR-based visitor check-in functionality.",
+            "Implemented dynamic subdomain routing for multi-tenant isolation.",
+            "Built complex calendar integrations for appointment scheduling.",
+            "Developed RBAC dashboards for Admin, Owner, Staff, and Customers."
+        ],
+        technologyStack: {
+            paragraph: "Focusing on scalability and multi-tenancy support through modern React patterns.",
+            stack: {
+                frontend: ["Next.js 15", "TypeScript", "Tailwind CSS"],
+                backend: ["Node.js integration"],
+                security: ["RBAC", "JWT"]
+            }
+        },
+        conclusion: "Reduced manual check-in time by ~40% and served 3+ organizations effectively.",
+        tags: ["SaaS", "Booking", "Multi-tenant", "QR-Code"]
+    },
+    {
+        title: "ERP Management System",
+        tech: "React.js · Context API · Tailwind CSS",
+        description: "Enterprise resource planning frontend covering inventory, sales, and analytics with real-time dashboards.",
+        image: "/erp.png",
+        client: "Internal ERP Client",
+        link: "Github",
+        dateFrom: "Aug 2024",
+        dateTo: "Oct 2024",
+        statement: "The challenge was to replace legacy manual workflows with a unified, real-time digital dashboard for inventory and sales tracking.",
+        details: [
+            "Created 10+ modules covering inventory, sales, customers, and analytics.",
+            "Replaced 2 legacy manual workflows with real-time digital solutions.",
+            "Optimized state management using Context API, reducing bundle size by 15%.",
+            "Standardized UI components to reduce bug reports by 30%."
+        ],
+        technologyStack: {
+            paragraph: "Prioritizing maintainability and performance across a large-scale enterprise application.",
+            stack: {
+                frontend: ["React.js", "Tailwind CSS"],
+                state: ["Context API"],
+                charts: ["Recharts", "ApexCharts"]
+            }
+        },
+        conclusion: "The transition resulted in a measurably cleaner codebase and improved operational efficiency.",
+        tags: ["ERP", "Dashboard", "Inventory", "React"]
+    },
+    {
+        title: "Waitr – Restaurant POS",
+        tech: "Electron.js · React.js · Offline-First",
+        description: "Cross-platform desktop POS with order management and table handling, operational without internet.",
+        image: "/pos.png",
+        client: "Unityr Techlabs",
+        link: "Deployed on Windows",
+        dateFrom: "Feb 2024",
+        dateTo: "Oct 2024",
+        statement: "Restaurants face frequent network outages; a POS must work offline while ensuring data consistency when the connection returns.",
+        details: [
+            "Built using React.js + Electron.js for a native desktop experience.",
+            "Implemented offline-first architecture with local data sync.",
+            "Features order management, table handling, and kitchen display.",
+            "Zero data loss reported during network interruptions in UAT."
+        ],
+        technologyStack: {
+            paragraph: "Building robust desktop software with web technologies and specialized persistence layers.",
+            stack: {
+                framework: ["Electron.js", "React.js"],
+                storage: ["IndexedDB", "SQLite-local"],
+                styling: ["Tailwind CSS"]
+            }
+        },
+        conclusion: "Successfully provided uninterrupted service during outages, significantly reducing order errors.",
+        tags: ["POS", "Electron", "Offline-first", "Retail"]
+    }
+];
 
 
 const projectData = {
-    heading: 'Designing a Better World Today',
-    pageHeader: 'Our best works'
-}
-
-const blogData = {
-    heading: 'latest from blog'
-}
+    heading: 'Designing a Better World Through Code',
+    pageHeader: 'Selected Works'
+};
 
 const heroData = {
-    heading: 'hello i‘m mohammed nowfal, fullstack developer',
-    subHeading: 'welcome my friend'
-}
+    heading: 'Yokesh Kumar T R',
+    role: 'Full Stack Developer',
+    description: 'Specializing in React, Next.js 15 & Node.js',
+    subHeading: '9+ Months Production Experience'
+};
 
-const navlist = [{
-        name: 'home',
-        to: 'hero',
-        path: '/',
-    },
-    {
-        name: 'About',
-        to: 'about',
-        path: '/',
-    },
-    {
-        name: 'services',
-        to: 'services',
-        path: '/',
-    },
-    {
-        name: 'Portfolio',
-        to: 'portfolio',
-        path: '/',
-    },
-    {
-        name: 'blog',
-        to: 'blog',
-        path: '/',
-    },
+const recordData = {
+    experience: "01", // Production internship started Feb 2024
+    solutions: "04",
+    prototypes: "06",
+    skills: "15"
+};
+
+const navlist = [
+    { name: 'Home', to: 'hero', path: '/' },
+    { name: 'About', to: 'about', path: '/' },
+    { name: 'Services', to: 'services', path: '/' },
+    { name: 'Portfolio', to: 'portfolio', path: '/' }
 ];
 
-export { serviceData, aboutData, projectData, blogData, heroData, navlist };
+export { serviceData, aboutData, projectData, heroData, navlist, experienceData, projects, recordData };
